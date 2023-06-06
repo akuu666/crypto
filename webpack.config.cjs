@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.ts',  // Your TypeScript entry point
@@ -19,6 +20,11 @@ module.exports = {
       "process": require.resolve("process/browser")
     }
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+  ],
   module: {
     rules: [
       {
