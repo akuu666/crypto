@@ -15,7 +15,8 @@ module.exports = {
       "path": require.resolve("path-browserify"),  // Adds the fallback for 'path'
       "crypto": require.resolve("crypto-browserify"),  // Adds the fallback for 'crypto'
       "fs": require.resolve("browserify-fs"),  // Adds the fallback for 'fs'
-      "os": require.resolve("os-browserify/browser")  // Adds the fallback for 'os'
+      "os": require.resolve("os-browserify/browser"),  // Adds the fallback for 'os'
+      "process": require.resolve("process/browser")
     }
   },
   module: {
