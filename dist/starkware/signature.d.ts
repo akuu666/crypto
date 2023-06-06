@@ -1,0 +1,14 @@
+export function pedersen(input: any): any;
+export function getLimitOrderMsgHash(vaultSell: any, vaultBuy: any, amountSell: any, amountBuy: any, tokenSell: any, tokenBuy: any, nonce: any, expirationTimestamp: any): any;
+export function getLimitOrderMsgHashWithFee(vaultSell: any, vaultBuy: any, amountSell: any, amountBuy: any, tokenSell: any, tokenBuy: any, nonce: any, expirationTimestamp: any, feeToken: any, feeVaultId: any, feeLimit: any): any;
+export function getTransferMsgHash(amount: any, nonce: any, senderVaultId: any, token: any, receiverVaultId: any, receiverPublicKey: any, expirationTimestamp: any, condition: any): any;
+export function getTransferMsgHashWithFee(amount: any, nonce: any, senderVaultId: any, token: any, receiverVaultId: any, receiverStarkKey: any, expirationTimestamp: any, condition: any, feeToken: any, feeVaultId: any, feeLimit: any): any;
+export function sign(privateKey: any, msgHash: any): any;
+export function verify(publicKey: any, msgHash: any, msgSignature: any): any;
+export const prime: BN;
+export const maxEcdsaVal: BN;
+export const starkEc: EllipticCurve;
+export const constantPoints: any[];
+export const shiftPoint: any;
+import BN from "bn.js";
+import { ec as EllipticCurve } from "elliptic";

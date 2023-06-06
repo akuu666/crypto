@@ -1,0 +1,15 @@
+import { ec } from 'elliptic';
+import { LimitOrder, Transfer, Signature } from './types';
+export { LimitOrder, Transfer, Signature } from './types';
+export declare const generateKey: (mnemonic?: string | undefined) => ec.KeyPair;
+export declare const exportPrivateKey: (key: ec.KeyPair) => string;
+export declare const exportPublicKey: (key: ec.KeyPair) => string;
+export declare const exportPublicKeyX: (key: ec.KeyPair) => string;
+export declare const loadPrivateKey: (privateKey: string) => ec.KeyPair;
+export declare const loadPublicKey: (publicKey: string) => ec.KeyPair;
+export declare const signMessage: (privateKey: string, message: string) => Signature;
+export declare const verifyMessage: (publicKey: string, message: string, signature: Signature) => any;
+export declare const signTransfer: (privateKey: string, transfer: Transfer) => Signature;
+export declare const verifyTransfer: (publicKey: string, transfer: Transfer, signature: Signature) => boolean;
+export declare const signLimitOrder: (privateKey: string, limitOrder: LimitOrder) => Signature;
+export declare const verifyLimitOrder: (publicKey: string, limitOrder: LimitOrder, signature: Signature) => boolean;
